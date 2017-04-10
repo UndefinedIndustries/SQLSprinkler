@@ -41,7 +41,7 @@
 		</center>
 		<div style="bottom: 0;position:fixed;float:left;left:0;">
     		<?php
-				include_once('lib/version.php');  //include the php version file
+//				include_once('lib/version.php');  //include the php version file
 				?>
   		</div>
    </body>
