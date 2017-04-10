@@ -1,33 +1,30 @@
 <br>
 <br><?php
 	$a = '';
-#System 1
-	exec ( "gpio read 23", $status );
-#System 2
-	exec ( "gpio read 1", $status );
-#System 3
-	exec ( "gpio read 4", $status );
-#System 4
-	exec ( "gpio read 0", $status );
-#System 5
-	exec ( "gpio read 2", $status );
-#System 6
-	exec ( "gpio read 3", $status );
-#System 7
-	exec ( "gpio read 12", $status );
-#System 8
-	exec ( "gpio read 13", $status );
-#System 9
-	exec ( "gpio read 14", $status );
-#System 10
-	exec ( "gpio read 24", $status );
-#Garage Door
+    $servername = "localhost"; //server ip for sql
+    $username   = "root"; //server username
+    $password   = "#FiddleFire"; //server password
+    $dbname     = "Computers"; //database name
+    $conn       = mysqli_connect($servername, $username, $password, $dbname); //connect to sql database with all parameters
+
+    $sql    = "SELECT * FROM `list`"; // select only the username field from the table "users_table"
+    $result = mysqli_query($conn, $sql); // process the query
+    $username_array = array(); // start an array
+    while ($row = mysqli_fetch_array($result)) // cycle through each record returned
+      {
+        $sysname[] = "\"" . $row['Name'] . "\""; // get the username field and add to the array above with surrounding quotes
+        $sysgpio[]       = "\"" . $row['GPIO'] . "\""; // get the ip field and add to the array
+        $name             = trim($username_array[$a], '"'); //trim " " from username
+        $gpio               = trim($ip_array[$a], '"'); //trim " " from ip
+
+	    exec ( "gpio read -g".$gpio."", $status );
+    
 	foreach ($status as $value){
 		?>
 			<div style="max-width: 400px;">
 		<?php
   		if ($value == 1){ $data = "Off"; }else{ $data = "On"; }
-   			echo '<br/><p style="float:left;" class="label">Station: '.++$a.' <br>&nbspStatus: '.$data.'</p>';
+   			echo '<br/><p style="float:left;" class="label"> '.$name.' <br>&nbspStatus: '.$data.'</p>';
    		if ($value == 0){
      		echo '<button style="float:right;" name="off" value='.$a.' class="w3-btn w3-xlarge w3-green w3-round-large w3-hover-aqua" id="'.$a.'" onclick="getData('.$a.')">Turn Off </button><br><br>';
    		}else{
@@ -35,7 +32,8 @@
    		}?>
 <br>	</div>
 		<?php
-	}
+	       }
+        }
  ?>
 
 <script>
