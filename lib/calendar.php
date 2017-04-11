@@ -1,13 +1,18 @@
 <?php
 	include 'scan.php';
  ?>
-<!DOCTYPE html>
+<center>
 <html>
 	<head>
     	<meta charset="utf-8">
     	<title></title>
   	</head>
+    <div style="position:fixed;top:0;left:0;">
+       <a href="edit.php" class="w3-btn w3-hover-lime w3-black" style="float: left;">Config</a>
+       <a href="./" class="w3-btn w3-hover-pink w3-black" style="float: left">Home</a>
+    </div>
 	<body>
+        <div style="width:750px;color: white;">
  		<center>
 			<span style="color: #fff;font-size: 2em;">
 				Schedule
@@ -18,11 +23,12 @@
           <center>
               <input type="submit" value="Submit" class="w3-blue w3-btn w3-hover-red w3-round-large"/>
               <a href="./" style="text-decoration: none;color :#000;">
-  				<button type="button" class="w3-btn w3-xlarge w3-blue w3-round-large w3-hover-blue-grey">
+  				<button type="button" class="w3-btn  w3-blue w3-round-large w3-hover-blue-grey">
   					Cancel
   				</button>
   			</a>
           </center>
         </form>
+    </div>
   </body>
 </html>

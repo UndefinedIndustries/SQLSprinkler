@@ -1,5 +1,5 @@
 #!/bin/bash
-workdir=/var/www/html/modules/sPrInkler/lib
+workdir=/var/www/html/modules/SQLSprinkler/lib
 echo 'running the sprinkler script...'
 while [ true ]; do
 systime=$(date +%H%M)

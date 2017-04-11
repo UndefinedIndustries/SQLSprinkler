@@ -1,16 +1,27 @@
 
 <?php
- /*
-		So, this is an interesting bit.  I remembed writing this section of code at three in the morning.
-		I have no clue what happened that night, but this chunk is insane.  I honestly have no clue
-		how to comment it, or even document it.  I have no clue what the hell is going on, or how
-		the idea to write this came to my mind.  But hey, in the end, it works really well, and it
-		kinda is nice to have for the program.
- */
+$station_name = $_GET['remove'];
+$servername = "192.168.1.181";
+$username = "root";
+$password = "#FiddleFire";
+$dbname = "SQLSprinkler";
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+if(isset($_GET['remove'])){
+// sql to delete a record
+$sql = "DELETE FROM Systems WHERE Name='$station_name'";
 
-  for ($i = 1; $i <= 10; $i++) {
-    $data = $_POST[$i];
-    exec("echo ".$data." > ../data/sys".$i.".dat");
-  }
-  header('Location: ../');
+if ($conn->query($sql) === TRUE) {
+    echo "Record deleted successfully";
+    header("Location: ../edit.php");
+} else {
+    echo "Error deleting record: " . $conn->error;
+}
+}
+
 ?>
+
