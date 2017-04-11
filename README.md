@@ -7,3 +7,5 @@ called 'Systems', and three rows called "Name (string)", "GPIO (int)", and
 "Time (int)". Do note that these are case sensitive, and the content in the
 parenthesis are what you have to set the type to. Please see 
 https://github.com/UndefinedIndustries/PiMation for the PiMation system.
+This is a module for my PiMation automation system.  Please see
+https://github.com/UndefinedIndustries/PiMation for the system.
