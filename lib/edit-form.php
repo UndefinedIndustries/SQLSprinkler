@@ -1,33 +1,39 @@
 <center>
-<div style="width:75%;" >
-    <div class="w3-quarter w3-indigo" style="color: white;">
-    Station
-</div>
-<div class="w3-quarter w3-indigo">
-    GPIO Number
-</div>
-<div class="w3-quarter w3-indigo">
-    Time
-</div>
-<div class="w3-quarter w3-indigo">
-    Actions
-</div>
+<div style="width:95%;" class="w3-responsive" >
+    <table class="w3-table w3-blue w3-bordered">
+    <tr class="w3-indigo">
+        <th>
+            Station
+        </th>
+        <th>
+            GPIO Number
+        </th>
+        <th>
+            Time
+        </th>
+        <th>
+            Actions
+        </th>
+    </tr>
+
 <?php
     function checkSys($name1, $gpio1, $time1){
     ?>
-    <div class="w3-quarter  w3-cyan">
+    <tr>
+    <td>
         <?php echo $name1; ?>
-    </div>
-    <div class="w3-quarter  w3-cyan">
+    </td>
+    <td>
         <?php echo $gpio1; ?>
-    </div>
-    <div class="w3-quarter  w3-cyan">
+    </td>
+    <td>
         <?php echo $time1; ?> Minutes
-    </div>
-    <div class="w3-quarter w3-purple">
+    </td>
+    <td>
         <a href="lib/editsys.php?system=<?php echo $name1."&gpio=".$gpio1."&time=".$time1 ?>">Edit</a> | <a href="lib/edit-submit.php?remove=<?php echo $name1 ?>">Delete</a>
-    </div>
-    <hr/>
+    </td>
+</tr>
+
     <?php
 }
     $a = 0;
@@ -52,6 +58,7 @@
 	checkSys($name, $gpio, $timea);
 }
 ?>
+</table>
 </div>
 <br>
 <br/><br/>

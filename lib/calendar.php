@@ -8,11 +8,11 @@
     	<title></title>
   	</head>
     <div style="position:fixed;top:0;left:0;">
-       <a href="edit.php" class="w3-btn w3-hover-lime w3-black" style="float: left;">Config</a>
-       <a href="./" class="w3-btn w3-hover-pink w3-black" style="float: left">Home</a>
+       <a href="edit.php" class="w3-btn w3-hover-lime w3-black w3-card" style="float: left;">Config</a>
+       <a href="./" class="w3-btn w3-hover-pink w3-black w3-card" style="float: left">Home</a>
     </div>
 	<body>
-        <div style="width:750px;color: white;">
+        <div style="width:750px;color: white;padding-left: 32px;padding-right: 32px;margin: 12%" class="w3-indigo w3-padding-32 w3-round-large w3-card-4">
  		<center>
 			<span style="color: #fff;font-size: 2em;">
 				Schedule

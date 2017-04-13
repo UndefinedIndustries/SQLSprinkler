@@ -42,7 +42,7 @@ function calendar(){
   ?>
 
         <span style="float:left;font-size: .9em"><?php echo $name; ?></span>
-      <input style="float:right;" type="checkbox" <?php check_day($i-1); ?>name="day<?php echo $i;?>" value="<?php echo $i;?>"></input><br/><br/></td></tr>
+      <input style="float:right;background-color:cyan;" type="checkbox" <?php check_day($i-1); ?>name="day<?php echo $i;?>" value="<?php echo $i;?>"></input><br/><br/></td></tr>
 
   <?php
   }

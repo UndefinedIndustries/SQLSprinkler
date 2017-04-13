@@ -3,11 +3,11 @@
 function checkGPIO($name1, $gpio1){
 $value = shell_exec('gpio -g read '.$gpio1);
 if ($value == 1){ $data = "Off"; }else{ $data = "On"; }
-   			echo '<br/><p style="float:left;" class="label"> '.$name1.' <br>&nbspStatus: '.$data.'</p>';
+   			echo '<br/><p style="float:left;" class="label">'.$name1.' <br><span style="float: left; color: white;">Status: '.$data.'</span></p>';
    		if ($value == 0){
-     		echo '<button style="float:right;" name="off" value='.$gpio1.' class="w3-btn w3-xlarge w3-green w3-round-large w3-hover-aqua" id="'.$gpio1.'" onclick="getData('.$gpio1.')">Turn Off </button><br><br>';
+     		echo '<button style="float:right;" name="off" value='.$gpio1.' class="w3-btn w3-xlarge w3-green w3-round-large w3-hover-red w3-card-4" id="'.$gpio1.'" onclick="getData('.$gpio1.')">Turn Off </button><br><br>';
    		}else{
-     		echo '<button name="on" style="float:right;" value='.$gpio1.' class="w3-btn w3-xlarge w3-blue w3-round-large w3-hover-purple" id="'.$gpio1.'" onclick="getData('.$gpio1.')">Turn On </button><br><br>';
+     		echo '<button name="on" style="float:right;" value='.$gpio1.' class="w3-btn w3-xlarge w3-blue w3-round-large w3-hover-purple w3-card-4" id="'.$gpio1.'" onclick="getData('.$gpio1.')">Turn On </button><br><br>';
    		}
 }
 ?>
