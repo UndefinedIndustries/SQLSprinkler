@@ -19,7 +19,21 @@
 			</span>
 		</center>
         <form action="lib/calendar-submit.php" method="get">
+                    <table class="w3-table w3-blue w3-bordered">
+                    <tr class="w3-indigo">
+                        <th>
+                            Day
+                        </th>
+                        <th>
+                            A
+                        </th>
+                        <th>
+                             B
+                        </th>
+                    </tr>
+        
           <?php calendar(); ?>
+          </table>
           <center>
               <input type="submit" value="Submit" class="w3-blue w3-btn w3-hover-red w3-round-large"/>
               <a href="./" style="text-decoration: none;color :#000;">

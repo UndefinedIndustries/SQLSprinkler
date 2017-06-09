@@ -12,12 +12,16 @@
             Time
         </th>
         <th>
+            Run Days
+        </th>
+        <th>
             Actions
         </th>
+
     </tr>
 
 <?php
-    function checkSys($name1, $gpio1, $time1){
+    function checkSys($name1, $gpio1, $time1, $days){
     ?>
     <tr>
     <td>
@@ -26,20 +30,34 @@
     <td>
         <?php echo $gpio1; ?>
     </td>
+
     <td>
         <?php echo $time1; ?> Minutes
     </td>
+        <td>
+            <?php     
+            if($days==1){
+                    $actualdays="A";
+                }
+                if($days==2){
+                    $actualdays="B";
+                }
+                if($days==3){
+                    $actualdays="A & B";
+                }
+                echo $actualdays; ?>
+        </td>
     <td>
-        <a href="lib/editsys.php?system=<?php echo $name1."&gpio=".$gpio1."&time=".$time1 ?>">Edit</a> | <a href="lib/edit-submit.php?remove=<?php echo $name1 ?>">Delete</a>
+        <a href="lib/editsys.php?system=<?php echo $name1."&gpio=".$gpio1."&time=".$time1."&days=".$days."" ?>">Edit</a> | <a href="lib/edit-submit.php?remove=<?php echo $name1 ?>">Delete</a>
     </td>
 </tr>
 
     <?php
 }
     $a = 0;
-    $servername = "192.168.1.181"; //server ip for sql
+    $servername = "127.0.0.1"; //server ip for sql
     $username   = "root"; //server username
-    $password   = "#FiddleFire"; //server password
+    $password   = "root"; //server password
     $dbname     = "SQLSprinkler"; //database name
     $conn       = mysqli_connect($servername, $username, $password, $dbname); //connect to sql database with all parameters
     $name= '';
@@ -51,11 +69,14 @@
         $sysname[] = "\"" . $row['Name'] . "\""; // get the username field and add to the array above with surrounding quotes
         $sysgpio[]       = "\"" . $row['GPIO'] . "\""; // get the ip field and add to the array
         $time[]   = "\"" . $row['Time'] . "\""; // get the ip field and add to the array
+        $sysdays[]   = "\"" . $row['Days'] . "\""; // get the ip field and add to the array        
         $name             = trim($sysname[$a], '"'); //trim " " from username
         $gpio               = trim($sysgpio[$a], '"'); //trim " " from ip
         $timea               = trim($time[$a], '"'); //trim " " from ip
+        $days = trim($sysdays[$a], '"');
 	$a++;
-	checkSys($name, $gpio, $timea);
+
+	checkSys($name, $gpio, $timea, $days);
 }
 ?>
 </table>

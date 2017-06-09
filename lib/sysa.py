@@ -14,14 +14,14 @@ cur = db.cursor()
 # Use all the SQL you like
 cur.execute("SELECT gpio, Time, Days, Number FROM Systems ")
 print '======='
-print '==A&B=='
+print '== A =='
 print '======='
 
 # print all the first cell of all the rows
 for row in list(cur.fetchall()):
-	if (row[2]==3):
+	if (row[2]==1):
 		#GPIO.setmode(GPIO.BCM)
-		print ("System %s" % row[3])
+		print("System %s "% row[3])
 	        #GPIO.setup(int(row[0]), GPIO.OUT)
 	 	#GPIO.output(int(row[0]), False)
 	 	#time.sleep(int(row[1])*60)

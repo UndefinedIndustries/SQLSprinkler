@@ -1,12 +1,23 @@
 <?php
-function check_day($dayx){
+function check_aday($dayx){
   for ($t=1; $t <=7 ; $t++) {
-    exec('cat ./data/day'.$t.'.dat', $status);
+      exec('touch ./data/aday'.$t.'.dat');
+    exec('cat ./data/aday'.$t.'.dat', $status);
       }
       if ($status[$dayx] == 1){
         echo 'checked ';
       }
     }
+    function check_bday($dayx){
+      for ($t=1; $t <=7 ; $t++) {
+           exec('touch ./data/bday'.$t.'.dat');
+        exec('cat ./data/bday'.$t.'.dat', $status);
+          }
+          if ($status[$dayx] == 1){
+            echo 'checked ';
+          }
+        }
+
 
 
 function calendar(){
@@ -41,9 +52,32 @@ function calendar(){
 
   ?>
 
-        <span style="float:left;font-size: .9em"><?php echo $name; ?></span>
-      <input style="float:right;background-color:cyan;" type="checkbox" <?php check_day($i-1); ?>name="day<?php echo $i;?>" value="<?php echo $i;?>"></input><br/><br/></td></tr>
 
+    <tr>
+
+        <th>
+            <?php echo $name;?>
+        </th>
+
+        <th>
+            <input style="background-color:cyan;" id="a"  type="checkbox" <?php check_aday($i-1); ?>name="aday<?php echo $i;?>" value="<?php echo $i;?>"></input>
+            
+        </th>
+        <th>
+            <input style="background-color:cyan;" id="a"  type="checkbox" <?php check_bday($i-1); ?>name="bday<?php echo $i;?>" value="<?php echo $i;?>"></input>
+        </th>
+    </tr>
+
+
+    
+        
+     <!-- <span style="float:right;">
+          <br?
+      <label><input style="float:right;background-color:cyan;" id="a"  type="checkbox" <?php check_aday($i-1); ?>name="day<?php echo $i;?>" value="<?php echo $i;?>"></input>A</label>
+  </span>
+    <span style="float:right;">
+      <label><input style="float:right;background-color:cyan;" id="b"  type="checkbox" <?php check_bday($i-1); ?>name="day<?php echo $i;?>" value="<?php echo $i;?>"></input>B</label></span><br/><br/></td></tr>
+-->
   <?php
   }
 
@@ -53,3 +87,4 @@ function calendar(){
 #read_gpio();
 #calendar();
 ?>
+</table>

@@ -1,9 +1,9 @@
 
 <?php
 $station_name = $_GET['remove'];
-$servername = "192.168.1.181";
+$servername = "localhost";
 $username = "root";
-$password = "#FiddleFire";
+$password = "root";
 $dbname = "SQLSprinkler";
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

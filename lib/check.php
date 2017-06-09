@@ -14,9 +14,9 @@ if ($value == 1){ $data = "Off"; }else{ $data = "On"; }
 </br>
 <?php
     $a = 0;
-    $servername = "192.168.1.181"; //server ip for sql
+    $servername = "localhost"; //server ip for sql
     $username   = "root"; //server username
-    $password   = "#FiddleFire"; //server password
+    $password   = "root"; //server password
     $dbname     = "SQLSprinkler"; //database name
     $conn       = mysqli_connect($servername, $username, $password, $dbname); //connect to sql database with all parameters
     $name= '';
