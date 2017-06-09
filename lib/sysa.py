@@ -19,11 +19,11 @@ print '======='
 
 # print all the first cell of all the rows
 for row in list(cur.fetchall()):
-	if (row[2]==1):
-		#GPIO.setmode(GPIO.BCM)
+	if (row[2]==1 or row[2]==3):
+		GPIO.setmode(GPIO.BCM)
 		print("System %s "% row[3])
-	        #GPIO.setup(int(row[0]), GPIO.OUT)
-	 	#GPIO.output(int(row[0]), False)
-	 	#time.sleep(int(row[1])*60)
-	 	#GPIO.output(int(row[0]), True)
+	        GPIO.setup(int(row[0]), GPIO.OUT)
+	 	GPIO.output(int(row[0]), False)
+	 	time.sleep(int(row[1])*60)
+	 	GPIO.output(int(row[0]), True)
 db.close()

@@ -21,7 +21,7 @@
     </tr>
 
 <?php
-    function checkSys($name1, $gpio1, $time1, $days){
+    function checkSys($name1, $gpio1, $time1, $days, $time2){
     ?>
     <tr>
     <td>
@@ -32,7 +32,7 @@
     </td>
 
     <td>
-        <?php echo $time1; ?> Minutes
+        <?php echo $time1; ?> 
     </td>
         <td>
             <?php     
@@ -45,10 +45,13 @@
                 if($days==3){
                     $actualdays="A & B";
                 }
+                if($days==0){
+                    $actualdays="OFF";
+                }
                 echo $actualdays; ?>
         </td>
     <td>
-        <a href="lib/editsys.php?system=<?php echo $name1."&gpio=".$gpio1."&time=".$time1."&days=".$days."" ?>">Edit</a> | <a href="lib/edit-submit.php?remove=<?php echo $name1 ?>">Delete</a>
+        <a href="lib/editsys.php?system=<?php echo $name1."&gpio=".$gpio1."&time=".$time2."&days=".$days."" ?>">Edit</a> | <a href="lib/edit-submit.php?remove=<?php echo $name1 ?>">Delete</a>
     </td>
 </tr>
 
@@ -75,8 +78,12 @@
         $timea               = trim($time[$a], '"'); //trim " " from ip
         $days = trim($sysdays[$a], '"');
 	$a++;
-
-	checkSys($name, $gpio, $timea, $days);
+    if($timea==0){
+        $timeb="OFF";
+    }else{
+        $timeb=$timea." minutes";
+    }
+	checkSys($name, $gpio, $timeb, $days, $timea);
 }
 ?>
 </table>
