@@ -1,10 +1,18 @@
+<?php 
+                $cookiename="loggedin";
+                      if(!isset($_COOKIE[$cookiename])) {
+                              header("Location: /login.php?url=".$_SERVER['REQUEST_URI']);
+                        } else {
+            
+                        }
+ ?> 
 <body>
 
-	<link href="https://gavinscodetest.tk/css/normalize.css" rel="stylesheet" />
+	<link href="https://gt3ch1.tk/css/normalize.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link href="https://gavinscodetest.tk/css/style0.css?<?php time(); ?>" rel="stylesheet" type="text/css"></link>
- 	<script src="https://gavinscodetest.tk/js/1jquery.js"></script>
- 	<script src="https://gavinscodetest.tk/js/sprinkler.js"></script>
+	<link href="https://gt3ch1.tk/css/style0.css?<?php time(); ?>" rel="stylesheet" type="text/css"></link>
+ 	<script src="https://gt3ch1.tk/js/1jquery.js"></script>
+ 	<script src="https://gt3ch1.tk/js/sprinkler.js"></script>
     <div style="position:fixed;top:0;left:0;">
         <a href="show_cal.php" class="w3-btn w3-hover-cyan w3-black" style="float: left;">System Calendar</a>
        <a href="lib/addsys.php" class="w3-btn w3-hover-lime w3-black" style="float: left;">Add System</a>

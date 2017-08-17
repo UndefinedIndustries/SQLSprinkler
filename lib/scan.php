@@ -1,3 +1,11 @@
+<?php 
+                $cookiename="loggedin";
+                      if(!isset($_COOKIE[$cookiename])) {
+                             header("Location: /login.php?url=".$_SERVER['REQUEST_URI']);
+                        } else {
+            
+                        }
+ ?> 
 <?php
 function check_aday($dayx){
   for ($t=1; $t <=7 ; $t++) {

@@ -1,4 +1,12 @@
 <?php 
+                $cookiename="loggedin";
+                      if(!isset($_COOKIE[$cookiename])) {
+                             header("Location: /login.php?url=".$_SERVER['REQUEST_URI']);
+                        } else {
+            
+                        }
+ ?> 
+<?php 
 $station = $_GET['station'];
 $gpio = $_GET['gpio'];
 $time = $_GET['time'];

@@ -1,3 +1,11 @@
+<?php 
+                $cookiename="loggedin";
+                      if(!isset($_COOKIE[$cookiename])) {
+                        header("Location: /login.php?url=".$_SERVER['REQUEST_URI']);
+                        } else {
+            
+                        }
+ ?> 
 <?php
     for ($i=1; $i <= 7; $i++) {
     	if(isset($_GET["aday$i"])){

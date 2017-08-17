@@ -1,3 +1,11 @@
+<?php 
+                $cookiename="loggedin";
+                      if(!isset($_COOKIE[$cookiename])) {
+                        header("Location: /login.php?url=".$_SERVER['REQUEST_URI']);
+                        } else {
+            
+                        }
+ ?> 
 <center>
 <div style="width:95%;" class="w3-responsive" >
     <table class="w3-table w3-blue w3-bordered">

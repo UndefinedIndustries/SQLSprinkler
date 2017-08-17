@@ -1,10 +1,17 @@
- <!DOCTYPE html>
+<?php 
+                $cookiename="loggedin";
+                      if(!isset($_COOKIE[$cookiename])) {
+                            header("Location: /login.php?url=".$_SERVER['REQUEST_URI']);
+                        } else {
+            
+                        }
+ ?> <!DOCTYPE html>
  <html>
    <head>
      	<meta charset="utf-8">
-    	<link href="https://gavinscodetest.tk/css/style0.css?test5" rel="stylesheet" type="text/css"></link>
-     	<script src="https://gavinscodetest.tk/js/1jquery.js"></script>
-     	<script src="https://gavinscodetest.tk/js/sprinkler.js"></script>
+    	<link href="https://gt3ch1.tk/css/style0.css?test5" rel="stylesheet" type="text/css"></link>
+     	<script src="https://gt3ch1.tk/js/1jquery.js"></script>
+     	<script src="https://gt3ch1.tk/js/sprinkler.js"></script>
 
     	<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">    
      	<title>sPrInkler Controller</title>

@@ -1,4 +1,11 @@
-
+<?php 
+                $cookiename="loggedin";
+                      if(!isset($_COOKIE[$cookiename])) {
+                             header("Location: /login.php?url=".$_SERVER['REQUEST_URI']);
+                        } else {
+            
+                        }
+ ?> 
 <?php
 $station_name = $_GET['remove'];
 $servername = "localhost";
