@@ -3,6 +3,7 @@ body{
     background-image: url(https://gt3ch1.tk/img/w8.jpg);
     display: block;
     color: white;
+    background-size: cover!important;
 
 }
 #data{
