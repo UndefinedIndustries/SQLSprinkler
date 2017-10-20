@@ -7,11 +7,13 @@
                         }
  ?> 
 <br>
-<br><?php
+<br>
+<div style="width: 100%;">
+<?php
 function checkGPIO($name1, $gpio1){
 $value = shell_exec('gpio -g read '.$gpio1);
 if ($value == 1){ $data = "Off"; }else{ $data = "On"; }
-   			echo '<br/><p style="float:left;" class="label">'.$name1.' <br><span style="float: left; color: white;">Status: '.$data.'</span></p>';
+   			echo '<br/><span style="float:left;" class="label">'.$name1.' <br><span class="label">Status: '.$data.'</span></span>';
    		if ($value == 0){
      		echo '<button style="float:right;" name="off" value='.$gpio1.' class="w3-btn w3-xlarge w3-green w3-round-large w3-hover-red w3-card-4" id="'.$gpio1.'" onclick="getData('.$gpio1.')">Turn Off </button><br><br>';
    		}else{
@@ -19,6 +21,7 @@ if ($value == 1){ $data = "Off"; }else{ $data = "On"; }
    		}
 }
 ?>
+</div>
 </br>
 <?php
     $a = 0;

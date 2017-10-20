@@ -69,30 +69,14 @@ function calendar(){
 
         <th>
             <input style="background-color:cyan;" id="a"  type="checkbox" <?php check_aday($i-1); ?>name="aday<?php echo $i;?>" value="<?php echo $i;?>"></input>
-            
         </th>
         <th>
             <input style="background-color:cyan;" id="a"  type="checkbox" <?php check_bday($i-1); ?>name="bday<?php echo $i;?>" value="<?php echo $i;?>"></input>
         </th>
     </tr>
-
-
-    
-        
-     <!-- <span style="float:right;">
-          <br?
-      <label><input style="float:right;background-color:cyan;" id="a"  type="checkbox" <?php check_aday($i-1); ?>name="day<?php echo $i;?>" value="<?php echo $i;?>"></input>A</label>
-  </span>
-    <span style="float:right;">
-      <label><input style="float:right;background-color:cyan;" id="b"  type="checkbox" <?php check_bday($i-1); ?>name="day<?php echo $i;?>" value="<?php echo $i;?>"></input>B</label></span><br/><br/></td></tr>
--->
   <?php
   }
 
 }
-
-#echo_system();
-#read_gpio();
-#calendar();
 ?>
 </table>

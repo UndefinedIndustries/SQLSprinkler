@@ -1,0 +1,17 @@
+/* CSS Document */
+body{
+    background-image: url(https://gt3ch1.tk/img/w8.jpg);
+    display: block;
+    color: white;
+
+}
+#data{
+    max-width: 1200px;
+
+}
+.label{
+    float: left!important;
+}
+button{
+    float:right!important;
+}

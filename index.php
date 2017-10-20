@@ -5,15 +5,16 @@
                         } else {
             
                         }
- ?> <!DOCTYPE html>
+ ?>
+<!DOCTYPE html>
  <html>
    <head>
      	<meta charset="utf-8">
-    	<link href="https://gt3ch1.tk/css/style0.css?test5" rel="stylesheet" type="text/css"></link>
-     	<script src="https://gt3ch1.tk/js/1jquery.js"></script>
-     	<script src="https://gt3ch1.tk/js/sprinkler.js"></script>
+    	<link href="css/style.css" rel="stylesheet" type="text/css"></link>
+     	<script src="js/1jquery.js"></script>
+     	<script src="js/sprinkler.js"></script>
 
-    	<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">    
+    	<link rel="stylesheet" href="css//w3.css">    
      	<title>sPrInkler Controller</title>
    </head>
    <body>
