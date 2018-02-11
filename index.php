@@ -6,7 +6,6 @@
             
                         }
  ?>
-SAMPLE TEXT FOR SAMPLE
 <!DOCTYPE html>
  <html>
    <head>
