@@ -13,14 +13,20 @@ cur = db.cursor()
 
 # Use all the SQL you like
 cur.execute("SELECT gpio, Time FROM Systems ")
-print "Winterizing System"
+print "[[INFO]] Winterizing System"
 # print all the first cell of all the rows
+GPIO.setwarnings(False)
 for row in list(cur.fetchall()):
+	print ("[[INFO]] RECHARGING")
+	time.sleep(300)
 	GPIO.setmode(GPIO.BCM)
-	print row[0]
+	print ("[[WARNING]] WINTERIZING: " + str(row[0]))
+	time.sleep(10)
         GPIO.setup(int(row[0]), GPIO.OUT)
+	print ("[[WARNING]] RELEASING AIR")
 	GPIO.output(int(row[0]), False)
-	print row[1]*60
-	time.sleep(15)
+	time.sleep(75)
+	print ("[[INFO]] DONE")
 	GPIO.output(int(row[0]), True)
 db.close()
+print ("[[INFO]] DONE")

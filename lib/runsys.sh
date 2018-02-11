@@ -4,11 +4,17 @@ echo 'running the sprinkler script...'
 while [ true ]; do
 systime=$(date +%H%M)
 runsys=$(cat $workdir/sys.dat)
+weatherdat=$(cat $workdir/weather_count.dat)
 #change that dir ^ to needed.
+if [ $weatherdat -gt 6 ]; then
+	weathernorun = true
+fi
+
+
 if [ $runsys == "1" ]; then
 echo "[[INFO]]"
 i=$(date +%u)
-  if [ $systime == "0025" ]; then
+  if [ $systime == "0025" ] && [ $weatherdat ]; then
 	sysaday=$(cat "$workdir/../data/aday$(date +%u).dat")
 	sysbday=$(cat "$workdir/../data/bday$(date +%u).dat")
 	if [ $sysaday == "1" ] && [ $sysbday == "1" ]; then
