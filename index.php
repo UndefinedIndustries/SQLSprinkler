@@ -28,14 +28,30 @@
         
 				<div style="max-width:1200px;">
        			<?php
+				$weather_check=file_get_contents('lib/weather_count.dat');
        				$test1=file_get_contents('lib/sys.dat'); //get the contents of the file lib/sys.dat
+				if($weather_check >= 6){
        				if($test1 == 1){  // if the variable test1 is equal to one
+       					echo '<p style="float:left" >System Schedule <br> Status: On</p>'; //echo that the system is on
+       					echo '<button name="sysoff" id="sysoff" style="float:right" class="w3-btn w3-red w3-xlarge w3-hover-indigo w3-round-large w3-card-4"> Turn Off </button><br/><br>'; //make a buton that says turn off
+   					}else{ //else
+				       echo '<p style="float:left">System Schedule <br> Status: Off</p>'; //echo that the system is off
+				       echo '<button name="syson" id="syson" style="float:right" class="w3-btn w3-black w3-xlarge w3-round-large w3-hover-indigo w3-card-4"> Turn On </button><br/><br>'; //make a button that says turn on
+				}
+				?>
+				<br/> <br/>
+				<span id="alert" style="padding: 16px;"class="w3-gray w3-card-4">The weather check has indicated that the system does not need to run today.</span>
+
+				<?php
+				}else{
+				       				if($test1 == 1){  // if the variable test1 is equal to one
        					echo '<p style="float:left" >System Schedule <br> Status: On</p>'; //echo that the system is on
        					echo '<button name="sysoff" id="sysoff" style="float:right" class="w3-btn w3-teal w3-xlarge w3-hover-indigo w3-round-large w3-card-4"> Turn Off </button><br/><br>'; //make a buton that says turn off
    					}else{ //else
 				       echo '<p style="float:left">System Schedule <br> Status: Off</p>'; //echo that the system is off
 				       echo '<button name="syson" id="syson" style="float:right" class="w3-btn w3-blue w3-xlarge w3-round-large w3-hover-indigo w3-card-4"> Turn On </button><br/><br>'; //make a button that says turn on
        				}
+				}
         		?>
 			</div>
      		</form>

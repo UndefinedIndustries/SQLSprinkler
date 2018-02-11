@@ -13,6 +13,7 @@ lookup = weather.lookup(data)
 condition = lookup.condition()
 text = condition.text()
 def doPrint(a):
+	print "[[INFO]] Level: "+str(a+int(number))
 	os.system("echo "+ str(a+int(number))+" > weather_count.dat")
 
 if text == "Mostly Cloudy":
@@ -24,5 +25,4 @@ elif text == "Partly Cloudy":
 elif text == "Cloudy":
 	doPrint(1)
 else:
-	os.call("echo 0 > weather_count.dat")
-
+	doPrint(0)
