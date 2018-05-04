@@ -9,17 +9,20 @@
 <br>
 <br>
 <div style="width: 100%;">
+<table class="w3-table">
 <?php
 function checkGPIO($name1, $gpio1){
+echo '<tr>';
 $value = shell_exec('gpio -g read '.$gpio1);
 if ($value == 1){ $data = "Off"; }else{ $data = "On"; }
-   			echo '<br/><span class="label">'.$name1.' <br><span class="label">Status: '.$data.'</span></span>';
+   			echo '<td><span class="label">'.$name1.' <br><span class="label">Status: '.$data.'</span></span></td>';
    		if ($value == 0){
-     		echo '<button style="float:right;" name="off" value='.$gpio1.' class="w3-btn w3-xlarge w3-green w3-round-large w3-hover-red w3-card-4" id="'.$gpio1.'" onclick="getData('.$gpio1.')">Turn Off </button><br><br>';
+     		echo '<td><button style="float:right;" name="off" value='.$gpio1.' class="w3-btn w3-xlarge w3-green w3-round-large w3-hover-red w3-card-4" id="'.$gpio1.'" onclick="getData('.$gpio1.')">Turn Off </button></td>';
    		}else{
-     		echo '<button name="on" style="float:right;" value='.$gpio1.' class="w3-btn w3-xlarge w3-blue w3-round-large w3-hover-purple w3-card-4" id="'.$gpio1.'" onclick="getData('.$gpio1.')">Turn On </button><br><br>';
+     		echo '<td><button name="on" style="float:right;" value='.$gpio1.' class="w3-btn w3-xlarge w3-blue w3-round-large w3-hover-purple w3-card-4" id="'.$gpio1.'" onclick="getData('.$gpio1.')">Turn On </button></td>';
    		}
 }
+echo '</td>';
 ?>
 </div>
 </br>
@@ -44,7 +47,7 @@ if ($value == 1){ $data = "Off"; }else{ $data = "On"; }
 	checkGPIO($name, $gpio);
 }
 ?>
-<br>	</div>
+</table><br>	</div>
 		<?php
 mysqli_close($conn);
  ?>
