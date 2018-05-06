@@ -9,7 +9,7 @@
 <br>
 <br>
 <div style="width: 100%;">
-<table class="w3-table">
+<table class="w3-table w3-padding-16">
 <?php
 function checkGPIO($name1, $gpio1){
 echo '<tr>';

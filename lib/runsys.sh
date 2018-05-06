@@ -2,17 +2,19 @@
 workdir=/var/www/html/modules/SQLSprinkler/lib
 echo 'running the sprinkler script...'
 while [ true ]; do
+timeon=$(mysql -h localhost -u root -proot -s -N -e 'SELECT `On` FROM SQLSprinkler.Timing')
 systime=$(date +%H%M)
 runsys=$(cat $workdir/sys.dat)
 weatherdat=$(cat $workdir/weather_count.dat)
+weathernorun=false
 #change that dir ^ to needed.
 if [ $weatherdat -gt 13 ]; then
 	weathernorun=true
 fi
 
 
-if [ $systime == "2240" ]; then
-    if [ $weathernorun ]; then
+if [ $systime -ge "$timeon" ]; then
+    if [ $weathernorun == false ]; then
           if [ $runsys == "1" ]; then
 	    echo "[[INFO]]"
 	    i=$(date +%u)

@@ -16,3 +16,7 @@ body{
 button{
     float:right!important;
 }
+td{
+    vertical-align: middle!important;
+    
+}

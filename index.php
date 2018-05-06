@@ -28,7 +28,7 @@
         
 				<div style="max-width:1200px;">
 
-<table class="w3-table">       			<?php
+<table class="w3-table w3-bordered">       			<?php
 				echo '<tr>';
 				$weather_check=file_get_contents('lib/weather_count.dat');
        				$test1=file_get_contents('lib/sys.dat'); //get the contents of the file lib/sys.dat

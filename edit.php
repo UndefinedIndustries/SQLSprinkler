@@ -15,6 +15,7 @@
     <div style="position:fixed;top:0;left:0;">
         <a href="show_cal.php" class="w3-btn w3-hover-cyan w3-black" style="float: left;">System Calendar</a>
        <a href="lib/addsys.php" class="w3-btn w3-hover-lime w3-black" style="float: left;">Add System</a>
+		<a href="lib/time.php" class="w3-btn w3-hover-lime w3-black" style="float: left;">On Time</a>
        <a href="./index.php" class="w3-btn w3-hover-pink w3-black" style="float: left">Home</a>
    </div>
 	<center>
