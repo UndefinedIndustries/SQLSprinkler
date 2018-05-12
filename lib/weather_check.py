@@ -15,7 +15,7 @@ text = condition.text()
 def doPrint(a):
 	print "[[INFO]] Level: "+str(a+int(number))
 	os.system("echo "+ str(a+int(number))+" > weather_count.dat")
-
+	print text
 if text == "Mostly Cloudy":
 	doPrint(1)
 elif text == "Breezy":
@@ -24,5 +24,9 @@ elif text == "Partly Cloudy":
 	doPrint(1)
 elif text == "Cloudy":
 	doPrint(1)
+elif text == "Showers":
+	doPrint(3)
+elif text == "Rainy" or text == "Rain":
+	doPrint(4)
 else:
 	doPrint(0)

@@ -8,8 +8,8 @@
  ?> 
 <br>
 <br>
-<div style="width: 100%;">
-<table class="w3-table w3-padding-16">
+<div style="width: 100%;color:black;!important" class="w3-card w3-round-large ">
+<table class="w3-table-all w3-padding-16">
 <?php
 function checkGPIO($name1, $gpio1){
 echo '<tr>';

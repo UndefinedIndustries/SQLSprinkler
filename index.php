@@ -19,11 +19,11 @@
    </head>
    <body>
      <div style="position:fixed;top:0;left:0;">
-        <a href="edit.php" class="w3-btn w3-hover-lime w3-card" style="float: left;">Config</a>
-        <a href="../.." class="w3-btn w3-hover-pink w3-card" style="float: left">Home</a>
+        <a href="edit.php" class="w3-btn w3-hover-lime w3-card w3-black" style="float: left;">Config</a>
+        <a href="../.." class="w3-btn w3-hover-pink w3-card w3-black" style="float: left">Home</a>
 	</div>
     <center>
-    	<div style="max-width: 600px;margin-top: 50px; !important;float: none !important;text-align:center;">
+    	<div style="max-width: 800px;margin-top: 50px; !important;float: none !important;text-align:center;">
      		<form id ="test" action="lib/submit.php" method="get">
         
 				<div style="max-width:1200px;">
