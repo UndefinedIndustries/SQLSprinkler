@@ -11,7 +11,7 @@
 	if(isset($_GET['on'])) {
 			$run = $_GET['on'];
 			exec("sudo python off.py");
-			exec("sudo python on.py ".$run);
+			exec("sudo python on.py ".$run." &");
 		}
 	if(isset($_GET['off'])) {
 

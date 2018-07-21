@@ -32,7 +32,7 @@
 				echo '<tr>';
 				$weather_check=file_get_contents('lib/weather_count.dat');
        				$test1=file_get_contents('lib/sys.dat'); //get the contents of the file lib/sys.dat
-				if($weather_check >= 6){
+				if($weather_check >= 18){
        				if($test1 == 1){  // if the variable test1 is equal to one
        					echo '<td><p style="float:left" >System Schedule <br> Status: On</p></td>'; //echo that the system is on
        					echo '<td><button name="sysoff" id="sysoff" style="float:right" class="w3-btn w3-red w3-xlarge w3-hover-indigo w3-round-large w3-card-4"> Turn Off </button></td>'; //make a buton that says turn off
@@ -43,7 +43,7 @@
 				?>
 				<br/> <br/>
 				<span id="alert" style="padding: 16px;"class="w3-gray w3-card-4">The weather check has indicated that the system does not need to run today.</span>
-
+				<br><br>
 				<?php
 				}else{
 				       				if($test1 == 1){  // if the variable test1 is equal to one

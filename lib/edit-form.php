@@ -59,7 +59,7 @@
                 echo $actualdays; ?>
         </td>
     <td>
-        <a href="lib/editsys.php?system=<?php echo $name1."&gpio=".$gpio1."&time=".$time2."&days=".$days."" ?>">Edit</a> | <a href="lib/edit-submit.php?remove=<?php echo $name1 ?>">Delete</a>
+        <a href="lib/editsys.php?system=<?php echo $name1."&gpio=".$gpio1."&time=".$time2."&days=".$days."" ?>">Edit</a> | <a href="lib/edit-submit.php?remove=<?php echo $name1 ?>" onclick="return confirm('Are you sure you want to delete <?php echo $name1; ?>?');" >Delete</a>
     </td>
 </tr>
 
