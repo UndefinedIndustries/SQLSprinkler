@@ -68,7 +68,7 @@
     $a = 0;
     $servername = "127.0.0.1"; //server ip for sql
     $username   = "root"; //server username
-    $password   = "root"; //server password
+    $password   = "#FiddleFire"; //server password
     $dbname     = "SQLSprinkler"; //database name
     $conn       = mysqli_connect($servername, $username, $password, $dbname); //connect to sql database with all parameters
     $name= '';

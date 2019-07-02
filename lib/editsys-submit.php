@@ -16,7 +16,7 @@ echo $station;
 echo $oldname;
 $servername = "localhost"; //server ip for sql
 $username   = "root"; //server username
-$password   = "root"; //server password
+$password   = "#FiddleFire"; //server password
 $dbname     = "SQLSprinkler"; //database name
 $conn       = mysqli_connect($servername, $username, $password, $dbname); //connect to sql database with all parameters
 $sql = "UPDATE Systems SET Name='$station', GPIO='$gpio', Time='$time', Days='$days' WHERE `Systems`.`Name`='$oldname'";

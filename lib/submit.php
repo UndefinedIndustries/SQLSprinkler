@@ -19,7 +19,7 @@
 		}
 	if(isset($_GET['timeon'])){
 		$time=$_GET['timeon'];
-		$test = shell_exec('mysql -h localhost -u root -proot -s -N -e "UPDATE SQLSprinkler.Timing SET \`On\`= \'"'.$time.'"\'"');
+		$test = shell_exec('mysql -h localhost -u root -p#FiddleFire -s -N -e "UPDATE SQLSprinkler.Timing SET \`On\`= \'"'.$time.'"\'"');
 		echo $test;
 	}
 if(isset($_GET['sysoff'])) {

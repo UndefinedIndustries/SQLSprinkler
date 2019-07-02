@@ -5,7 +5,7 @@
 <a href="../" class="w3-btn w3-hover-pink" style="float: left:position:absolute;">Home</a>
 <center>
 <?php
-$ontime = shell_exec('mysql -h localhost -u root -proot -s -N -e "SELECT \`On\` FROM SQLSprinkler.Timing"');
+$ontime = shell_exec('mysql -h localhost -u root -p#FiddleFire -s -N -e "SELECT \`On\` FROM SQLSprinkler.Timing"');
 
 ?>
 
