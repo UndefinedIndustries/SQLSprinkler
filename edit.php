@@ -1,13 +1,10 @@
-<?php 
-                $cookiename="loggedin";
-                      if(!isset($_COOKIE[$cookiename])) {
-                              header("Location: /login.php?url=".$_SERVER['REQUEST_URI']);
-                        } else {
-            
-                        }
- ?> 
+<?php
+    $cookiename="loggedin";
+          if(!isset($_COOKIE[$cookiename])) {
+                  header("Location: /login.php?url=".$_SERVER['REQUEST_URI']);
+            }
+?>
 <body>
-
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link href="css/style.css?<?php time(); ?>" rel="stylesheet" type="text/css"></link>
  	<script src="js/1jquery.js"></script>
@@ -22,7 +19,7 @@
 		<br/>
 
 		<br/>
-	
+
 		</center>
 		<br/>
 		<br/>
@@ -34,6 +31,6 @@
 
  	<br/>
  	<div id="texts1" style="margin-left: 25%;margin-right:25%;width:50%;text-align: right;padding:5px;border-radius:10px;font-size: 1.5em;color:#fff;">
-	
+
   	</div>
 </body>
