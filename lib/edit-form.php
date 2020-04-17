@@ -31,7 +31,7 @@
 <?php
     function checkSys($name1, $gpio1, $time1, $days, $time2){
     ?>
-    <tr>
+    <tr class="<?php echo (($days==0) ? "w3-red" : (($days==1) ? "w3-green" : (($days==2) ? "w3-yellow" : "w3-blue")));?>">
     <td>
         <?php echo $name1; ?>
     </td>
