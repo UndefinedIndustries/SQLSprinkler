@@ -1,8 +1,9 @@
 /* CSS Document */
 body{
-    background-image: url(https://gt3ch1.tk/img/w8.jpg);
+    //background-image: url(https://peasenet.com/img/w8.jpg);
+    background-color:#EBEBE3;
     display: block;
-    color: white;
+    color: black;
     background-size: cover!important;
 
 }
