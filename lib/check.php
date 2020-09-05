@@ -1,15 +1,15 @@
 <?php 
-                $cookiename="loggedin";
-                      if(!isset($_COOKIE[$cookiename])) {
-                        header("Location: /login.php?url=".$_SERVER['REQUEST_URI']);
-                        } else {
-            
-                        }
+    $cookiename="loggedin";
+    if(!isset($_COOKIE[$cookiename])) {
+        //header("Location: /login.php?url=".$_SERVER['REQUEST_URI']);
+    } else {
+
+    }
  ?> 
 <br>
 <br>
-<div style="width: 100%;color:black;!important" class="w3-card w3-round-large ">
-<table class="w3-table-all w3-padding-16">
+<div style="width: 100%;color:black;!important">
+<table class="w3-table-all">
 <?php
 function checkGPIO($name1, $gpio1){
 echo '<tr>';
@@ -28,16 +28,16 @@ echo '</td>';
 </br>
 <?php
     $a = 0;
-    $servername = "localhost"; //server ip for sql
-    $username   = "root"; //server username
-    $password   = "#FiddleFire"; //server password
+    $servername = "192.168.1.143"; //server ip for sql
+    $username   = "web"; //server username
+    $password   = "X4vJOQVCF8WnnoJq"; //server password
     $dbname     = "SQLSprinkler"; //database name
     $conn       = mysqli_connect($servername, $username, $password, $dbname); //connect to sql database with all parameters
     $name= '';
     $sql    = "SELECT * FROM `Systems`"; // select only the username field from the table "users_table"
     $result = mysqli_query($conn, $sql); // process the query
     $username_array = array(); // start an array
-    while ($row = mysqli_fetch_array($result, MYSQL_ASSOC)) // cycle through each record returned
+    while ($row = mysqli_fetch_array($result)) // cycle through each record returned
       {
         $sysname[] = "\"" . $row['Name'] . "\""; // get the username field and add to the array above with surrounding quotes
         $sysgpio[]       = "\"" . $row['GPIO'] . "\""; // get the ip field and add to the array

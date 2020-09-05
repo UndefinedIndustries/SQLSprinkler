@@ -1,10 +1,10 @@
 <?php
-  $cookiename="loggedin";
-        if(!isset($_COOKIE[$cookiename])) {
-              header("Location: /login.php?url=".$_SERVER['REQUEST_URI']);
-          } else {
+    $cookiename="loggedin";
+    if(!isset($_COOKIE[$cookiename])) {
+        //header("Location: /login.php?url=".$_SERVER['REQUEST_URI']);
+    } else {
 
-          }
+    }
  ?>
 <!DOCTYPE html>
  <html>
@@ -15,7 +15,7 @@
      	<script src="js/sprinkler.js"></script>
 
     	<link rel="stylesheet" href="css//w3.css">
-     	<title>sPrInkler Controller</title>
+     	<title>SQLSprinkler</title>
    </head>
   <body>
   <div style="position:fixed;top:0;left:0;">
