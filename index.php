@@ -60,7 +60,7 @@ $id = $sqlquery->get_id();
         
         <!--        End systems-->
     </div>
-    <div class="w3-display-bottomleft w3-center w3-flat-asbestos w3-dropdown-hover " style="position:fixed;">
+    <div class="w3-display-bottomleft w3-center w3-flat-silver w3-dropdown-hover " style="position:fixed;">
         <a href="javascript:void(0);" id="menuopen" class="w3-button fix-bars"> <i style="z-index: 5;" class="fa fa-bars w3-display-middle"></i> </a>
         <div style="display: none;" id="menunav" >
 			<a id="menuclose" class="w3-button "> <i style="z-index: 5;" class="fa fa-times"></i></a> 
