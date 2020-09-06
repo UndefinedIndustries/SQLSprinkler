@@ -57,7 +57,8 @@ class doSQL{
         $password = "X4vJOQVCF8WnnoJq";
         $dbname = "SQLSprinkler";
         $conn = mysqli_connect($servername, $username, $password, $dbname);
-        mysqli_query($conn, $query);
+        $query = mysqli_query($conn, $query);
+        return $query;
     }
     function doSQLStuff($query){
         $a = 0;
