@@ -45,7 +45,7 @@ $id = $sqlquery->get_id();
                 <p>
                     <?php echo 'Zone '.($i+1).' - '.$names[$i]; ?>
                     <br>
-                    Status: <span id="status-<?php echo ($i+1); ?>">Off</p>
+                    Status: <span id="status-<?php echo $i; ?>">Off</p>
             </div>
             <div style="float:right;margin-top:8px;">
                 <button id="<?php echo $gpios[$i]; ?>" name="toggle" onclick="getData(<?php  echo $i; ?>)" class="w3-button systemoff w3-round-xxlarge w3-center" >Turn On</button>
