@@ -1,7 +1,7 @@
 var system_status = "";
 $(document).ready(function () {
     setInterval(function () {
-        $.get('lib/api.php', function (data, textStatus, jqXHR) {
+        $.get('lib/api.php?systems', function (data, textStatus, jqXHR) {
             system_status = JSON.parse(data);
         });
         for (i = 0; i < system_status.length; i++) {
@@ -42,7 +42,7 @@ function getData(index) {
     var xhttp = new XMLHttpRequest();
     var toggle = ((system_status[index]["status"] == "on") ? "off" : "on");
     var info = toggle + "=" + system_status[index]["gpio"];
-    xhttp.open("GET", "lib/submit.php?" + info, true);
+    xhttp.open("GET", "lib/api?" + info, true);
     console.log("sending");
     console.log(info);
     xhttp.send();
