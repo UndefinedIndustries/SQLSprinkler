@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 include( 'lib/sql.php' );
 $sqlquery = new doSQL();
 $sqlquery->doSQLStuff( "SELECT * FROM `Systems`" );
