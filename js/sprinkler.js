@@ -19,3 +19,13 @@ $(document).ready(function () {
 
     });
 });
+function getData(sys){
+    var xhttp = new XMLHttpRequest();
+    var test = document.getElementById(sys).name;
+    var info=test+"="+sys;
+    xhttp.open("GET", "lib/submit.php?"+info, true);
+    console.log("sending");
+    console.log(info);
+    xhttp.send();
+
+}
