@@ -1,12 +1,8 @@
-.content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid green;
-    width: 75%;
+*{
+margin: 0px;
 }
 button {
-    width: 150px;
+    width: 125px;
     height: 60px;
     font-size: 1.25em;
 }
