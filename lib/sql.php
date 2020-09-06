@@ -61,7 +61,7 @@ class doSQL{
     }
     function doSQLStuff($query){
         $a = 0;
-        $servername = "pimation";
+        $servername = "192.168.1.143";
         $username = "web";
         $password = "X4vJOQVCF8WnnoJq";
         $dbname = "SQLSprinkler";
@@ -84,7 +84,7 @@ class doSQL{
             }
 
             $this->set_names($newnames);
-            $this->set_gpios($newContent);
+            $this->set_gpios($newgpios);
             $this->set_times($newtimes);
 			$this->set_days($newdays);
             $this->set_id($id);
