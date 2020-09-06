@@ -28,7 +28,7 @@ $id = $sqlquery->get_id();
                     Status: On</p>
             </div>
             <div style="float:right;margin-top:8px">
-                <button class="w3-button programoff w3-round-xxlarge w3-centered" >&nbsp;&nbsp;Turn Off&nbsp;&nbsp;</button>
+                <button class="w3-button programoff w3-round-xxlarge w3-centered" >Turn Off</button>
             </div>
         </div>
         <hr>
