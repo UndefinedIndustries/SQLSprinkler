@@ -11,5 +11,5 @@ for ( $i = 0; $i < sizeof( $id ); $i++ ) {
     $array[$i]->status = ($value == 0 ? "on" : "off");
 }
 $json = json_encode($array);
-echo "system_status=".$json;
+echo $json;
 ?>
