@@ -1,3 +1,4 @@
+var system_status="";
 $(document).ready(function () {
     setInterval(function () {
         $.get('lib/api.php', function (data, textStatus, jqXHR) {
