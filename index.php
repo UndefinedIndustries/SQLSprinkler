@@ -16,6 +16,7 @@ $id = $sqlquery->get_id();
 <link href="css/w3-flat.css" type="text/css" rel="stylesheet" />
 <link href="css/style.css" type="text/css" rel="stylesheet" />
 <script src="https://kit.fontawesome.com/e00a151875.js" crossorigin="anonymous"></script> 
+<script src="lib/api.php"></script>
 <script src="js/jquery.js"></script> 
 <script src="js/sprinkler.js"></script>
 </head>
