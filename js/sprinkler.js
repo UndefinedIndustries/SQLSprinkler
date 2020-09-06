@@ -19,13 +19,13 @@ $(document).ready(function () {
 
     });
 });
-function getData(index,sys){
+function getData(index){
     var xhttp = new XMLHttpRequest();
-    if()
-    var info=test+"="+sys;
+    var toggle = system_status[index]["status"] == "on") ? "off" : "on";
+    var info=toggle+"="+sys;
     xhttp.open("GET", "lib/submit.php?"+info, true);
     console.log("sending");
     console.log(info);
-    xhttp.send();
+//    xhttp.send();
 
 }
