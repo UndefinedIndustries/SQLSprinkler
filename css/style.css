@@ -1,26 +1,41 @@
-/* CSS Document */
-body{
-    //background-image: url(https://peasenet.com/img/w8.jpg);
-    background-color:#EBEBE3;
-    display: block;
-    color: black;
-    background-size: cover!important;
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid green;
+    width: 75%;
+}
+button {
+    width: 150px;
+    height: 60px;
+    font-size: 1.25em;
+}
+/*System/program on is for when the text displays "on"*/
 
+.programon {
+    background-color: #BBDDFF;
+    color: #707070;
 }
-#data{
-    max-width: 1200px;
-
+.programoff {
+    background-color: #BBF3FF;
+    color: #707070;
 }
-.label{
-    float: left!important;
+.systemoff {
+    background-color: #BFFFCA;
+    color: #707070;
 }
-button{
-    float:right!important;
+.systemon {
+    background-color: #FCFF90;
+    color: #707070;
 }
-td{
-    vertical-align: middle!important;
-    
+.fix-bars{
+    font-size:22px;
+    padding:19px;
 }
-tr{
-vertical-align: middle!important;
+.striped div{
+    padding:4px;
+}
+.striped :nth-child(2n+4){
+    background-color:#F8F8F8!important;
+    color:black!important;
 }
