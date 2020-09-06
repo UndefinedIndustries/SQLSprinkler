@@ -2,7 +2,6 @@ $(document).ready(function () {
     setInterval(function () {
         $.get('lib/api.php', function (data, textStatus, jqXHR) {
             system_status=data;
-            alert(data);
         });
     }, 1000);
 });
