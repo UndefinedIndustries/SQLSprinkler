@@ -19,9 +19,9 @@ $(document).ready(function () {
 
     });
 });
-function getData(sys){
+function getData(index,sys){
     var xhttp = new XMLHttpRequest();
-    var test = document.getElementById(sys).name;
+    if()
     var info=test+"="+sys;
     xhttp.open("GET", "lib/submit.php?"+info, true);
     console.log("sending");

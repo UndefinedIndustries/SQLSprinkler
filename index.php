@@ -16,7 +16,7 @@ $id = $sqlquery->get_id();
 <link href="css/w3-flat.css" type="text/css" rel="stylesheet" />
 <link href="css/style.css" type="text/css" rel="stylesheet" />
 <script src="https://kit.fontawesome.com/e00a151875.js" crossorigin="anonymous"></script> 
-<script src="lib/api.php"></script>
+<script src="lib/api.php"></script> 
 <script src="js/jquery.js"></script> 
 <script src="js/sprinkler.js"></script>
 </head>
@@ -48,7 +48,7 @@ $id = $sqlquery->get_id();
                     Status: Off</p>
             </div>
             <div style="float:right;margin-top:8px;">
-                <button id="<?php echo $gpios[$i]; ?>" name="toggle" onclick="getData(<?php echo $gpios[$i]; ?>)" class="w3-button systemoff w3-round-xxlarge w3-center" >Turn On</button>
+                <button id="<?php echo $gpios[$i]; ?>" name="toggle" onclick="getData(<?php  echo $i.', '.$gpios[$i]; ?>)" class="w3-button systemoff w3-round-xxlarge w3-center" >Turn On</button>
             </div>
         </div>
         <hr>
