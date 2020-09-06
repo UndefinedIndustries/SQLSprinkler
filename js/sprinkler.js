@@ -21,8 +21,8 @@ $(document).ready(function () {
 });
 function getData(index){
     var xhttp = new XMLHttpRequest();
-    var toggle = system_status[index]["status"] == "on") ? "off" : "on";
-    var info=toggle+"="+sys;
+    var toggle = ((system_status[index]["status"] == "on") ? "off" : "on");
+    var info=toggle+"="+system_status[index]["gpio"];
     xhttp.open("GET", "lib/submit.php?"+info, true);
     console.log("sending");
     console.log(info);
