@@ -45,4 +45,8 @@ if ( isset ( $_GET[ 'systemenable' ] ) ) {
 	$test = $sqlquery->querySQL("UPDATE Enabled set enabled=".$val.";");
 	var_dump($test);
 }
+if ( isset ( $_GET[ 'update' ] ) ){
+	$log = shell_exec('cd ../ ; git fetch ; git pull');
+	echo $log;
+}
 ?>
