@@ -1,17 +1,18 @@
-var system_status="";
+var system_status = "";
 $(document).ready(function () {
     setInterval(function () {
         $.get('lib/api.php', function (data, textStatus, jqXHR) {
-            system_status=JSON.parse(data);
+            system_status = JSON.parse(data);
         });
+        for (i = 0; i < system_status.length; i++) {
+            button_id = system_status[i]["gpio"];
+            name_id = system_status[i]["status"].charAt(0).toUpperCase() + system_status[i]["status"].slice(1);
+            console.log(button_id);
+            console.log(name_id);
+            //todo
+        }
     }, 1000);
-    for(i = 0 ; i < system_status.length; i++){
-        button_id=system_status[i]["gpio"];
-        name_id=system_status[i]["status"].charAt(0).toUpperCase + system_status[i]["status"].slice(1);
-        console.log(button_id);
-        console.log(name_id);
-        //todo
-    }
+
 });
 
 $(document).ready(function () {
