@@ -46,8 +46,8 @@ if ( isset ( $_GET[ 'systemenable' ] ) ) {
 	var_dump($test);
 }
 if ( isset ( $_GET[ 'update' ] ) ){
-	exec('git fetch');
-	exec('git pull');
+	exec('/usr/bin/git fetch 2>&1');
+	exec('/usr/bin/git pull 2>&1');
 	echo "Done checking for updates.";
 }
 ?>
