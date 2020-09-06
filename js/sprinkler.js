@@ -7,8 +7,8 @@ $(document).ready(function () {
         for (i = 0; i < system_status.length; i++) {
             button_id = system_status[i]["gpio"];
             name_id = system_status[i]["status"].charAt(0).toUpperCase() + system_status[i]["status"].slice(1);
-            console.log(button_id);
-            console.log(name_id);
+            document.getElementById(button_id).innerHTML = "Turn " + name_id;
+            document.getElementById("status-"+i).innerHTML = "Turn " + name_id;
             //todo
         }
     }, 1000);
