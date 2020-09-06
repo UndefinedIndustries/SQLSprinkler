@@ -20,7 +20,7 @@ $(document).ready(function () {
 		});
         $.get('lib/api.php?systems', function (data, textStatus, jqXHR) {
             system_status = JSON.parse(data);
-            $("body").fadeIn(250);
+            $("body").delay(1000).fadeIn(250);
         });
         for (i = 0; i < system_status.length; i++) {
             button_id = system_status[i]["gpio"];
