@@ -28,7 +28,7 @@ $id = $sqlquery->get_id();
                     Status: On</p>
             </div>
             <div style="float:right;margin-top:8px">
-                <button class="w3-button programoff w3-round-xxlarge" >&nbsp;&nbsp;Turn Off&nbsp;&nbsp;</button>
+                <button class="w3-button programoff w3-round-xxlarge w3-centered" >&nbsp;&nbsp;Turn Off&nbsp;&nbsp;</button>
             </div>
         </div>
         <hr>
@@ -46,8 +46,8 @@ $id = $sqlquery->get_id();
                     <br>
                     Status: Off</p>
             </div>
-            <div style="float:right;margin-top:8px">
-                <button id="<?php echo $gpios[$i]; ?>" name="toggle" onclick="getData(<?php echo $gpios[$i]; ?>)" class="w3-button systemoff w3-round-xxlarge" >&nbsp;&nbsp;Turn On&nbsp;&nbsp;</button>
+            <div style="float:right;margin-top:8px;">
+                <button id="<?php echo $gpios[$i]; ?>" name="toggle" onclick="getData(<?php echo $gpios[$i]; ?>)" class="w3-button systemoff w3-round-xxlarge w3-center" >Turn On</button>
             </div>
         </div>
         <hr>
