@@ -63,7 +63,10 @@ $id = $sqlquery->get_id();
     <div class="w3-display-bottomleft w3-center w3-flat-asbestos w3-dropdown-hover " style="position:fixed;">
         <a href="javascript:void(0);" id="menuopen" class="w3-button fix-bars"> <i style="z-index: 5;" class="fa fa-bars w3-display-middle"></i> </a>
         <div style="display: none;" id="menunav" >
-            <a id="menuclose" class="w3-button "> <i style="z-index: 5;" class="fa fa-times"></i></a> <a href="#" class="w3-button"><i style="z-index: 5;" class="fa fa-home"></i></a> <a href="#" class="w3-button"><i style="z-index: 5;" class="fa fa-gears"></i></a>
+			<a id="menuclose" class="w3-button "> <i style="z-index: 5;" class="fa fa-times"></i></a> 
+			<a href="#" class="w3-button"><i style="z-index: 5;" class="fa fa-home"></i></a> 
+			<a href="#" class="w3-button"><i style="z-index: 5;" class="fa fa-gears"></i></a>
+			<a href="#" id="update" class="w3-button"><i style="z-index: 5;" class="fas fa-download"></i></a>
         </div>
     </div>
 </div>

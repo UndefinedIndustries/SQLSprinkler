@@ -37,10 +37,6 @@ $(document).ready(function () {
             //todo
         }
     }, 1000);
-
-});
-
-$(document).ready(function () {
     $("#menuopen").click(function () {
         $("#menuopen").fadeOut(250, function () {
             $('#menunav').fadeIn(250);
@@ -53,7 +49,13 @@ $(document).ready(function () {
         });
 
     });
-});
+	$("#update").click(function () {
+	   var xhttp = new XMLHttpRequest();                                      	
+       xhttp.open("GET", "lib/api.php?update");
+	   xhttp.send();
+	});
+
+}); 
 
 function getData(index) {
     var xhttp = new XMLHttpRequest();
