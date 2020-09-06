@@ -50,5 +50,6 @@ if ( isset ( $_GET[ 'update' ] ) ){
 	echo $log;
 	$log = shell_exec('git pull');
 	echo $log;
+	echo "Done checking for updates.";
 }
 ?>
