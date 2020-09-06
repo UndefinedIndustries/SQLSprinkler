@@ -66,7 +66,7 @@ $id = $sqlquery->get_id();
 			<a id="menuclose" class="w3-button "> <i style="z-index: 5;" class="fa fa-times"></i></a> 
 			<a href="#" class="w3-button"><i style="z-index: 5;" class="fa fa-home"></i></a> 
 			<a href="#" class="w3-button"><i style="z-index: 5;" class="fa fa-gears"></i></a>
-			<a href="#" id="update" class="w3-button"><i style="z-index: 5;" class="fas fa-download"></i></a>
+			<a id="update" class="w3-button"><i style="z-index: 5;" class="fas fa-download"></i></a>
         </div>
     </div>
 </div>

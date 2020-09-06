@@ -50,9 +50,12 @@ $(document).ready(function () {
 
     });
 	$("#update").click(function () {
-	   var xhttp = new XMLHttpRequest();                                      	
-       xhttp.open("GET", "lib/api.php?update");
-	   xhttp.send();
+	 	console.log("Sent update request...");
+		$.get('lib/api.php?update',function (data,textStatus,jqXHR){
+			console.log("Response -> " + data);	
+	  	});
+	   
+	  
 	});
 
 }); 

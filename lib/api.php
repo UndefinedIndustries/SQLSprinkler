@@ -46,7 +46,9 @@ if ( isset ( $_GET[ 'systemenable' ] ) ) {
 	var_dump($test);
 }
 if ( isset ( $_GET[ 'update' ] ) ){
-	$log = shell_exec('cd ../ ; git fetch ; git pull');
+	$log = shell_exec('git fetch');
+	echo $log;
+	$log = shell_exec('git pull');
 	echo $log;
 }
 ?>
