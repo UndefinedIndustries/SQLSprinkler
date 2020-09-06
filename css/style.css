@@ -6,19 +6,25 @@ button {
 /*System/program on is for when the text displays "on"*/
 .programon {
     background-color: #BBDDFF;
-    color: #707070;
+    
 }
 .programoff {
     background-color: #BBF3FF;
-    color: #707070;
+    
 }
 .systemoff {
     background-color: #BFFFCA;
-    color: #707070;
+    
 }
 .systemon {
     background-color: #FCFF90;
-    color: #707070;
+    
+}
+
+.programon, .programoff, .systemon, .systemoff {
+	outline:none;
+	color: #707070;
+
 }
 .fix-bars {
     font-size: 22px;

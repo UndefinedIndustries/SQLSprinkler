@@ -27,10 +27,10 @@ $id = $sqlquery->get_id();
         <div class="w3-rest">
             <div style="float:left;">
                 <p>System Schedule<br>
-                    Status: On</p>
+                    Status: <span id="schedule"></span></p>
             </div>
             <div style="float:right;margin-top:8px">
-                <button class="w3-button programoff w3-round-xxlarge w3-centered" >Turn Off</button>
+                <button id="schedule-btn" onclick="systemToggle();" class="w3-button programoff w3-round-xxlarge w3-centered" >Turn <span id="schedule-btn-txt">Off</span></button>
             </div>
         </div>
         <hr>
