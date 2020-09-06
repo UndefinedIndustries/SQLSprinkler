@@ -21,7 +21,7 @@
 </head>
 <body>
 <div>
-    <div class="w3-display-topmiddle w3-threequarter w3-padding-large striped">
+    <div class="w3-display-topmiddle w3-threequarter w3-padding-small striped">
         <div class="w3-rest">
             <div style="float:left;">
                 <p>System Schedule<br>
@@ -41,7 +41,7 @@
         ?>
          <div class="w3-rest">
             <div style="float:left;" >
-                <p><?php echo $names[$i]; ?><br>
+                <p><?php echo 'Zone '.($i+1).' - '.$names[$i]; ?><br>
                     Status: Off</p>
             </div>
             <div style="float:right;margin-top:8px">
