@@ -45,6 +45,6 @@ function getData(index) {
     xhttp.open("GET", "lib/submit.php?" + info, true);
     console.log("sending");
     console.log(info);
-    //    xhttp.send();
+    xhttp.send();
 
 }
