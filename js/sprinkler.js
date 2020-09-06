@@ -37,6 +37,7 @@ $(document).ready(function () {
             //todo
         }
     }, 1000);
+    $("body").fadeIn(2000);
     $("#menuopen").click(function () {
         $("#menuopen").fadeOut(250, function () {
             $('#menunav').fadeIn(250);
