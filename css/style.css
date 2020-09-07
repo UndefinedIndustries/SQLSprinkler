@@ -3,9 +3,6 @@ button {
     height: 60px;
     font-size: 1.25em;
 }
-body {
-  display: none;
-}
 /*System/program on is for when the text displays "on"*/
 .programon {
     background-color: #A5D2FF;

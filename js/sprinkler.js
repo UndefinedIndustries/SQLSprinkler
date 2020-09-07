@@ -1,6 +1,6 @@
 var system_status = "";
 var system_enable = "";
-$(document).ready(function () {
+function getSprinklers() {
     setInterval(function () {
 		$.get('lib/api.php?systemstatus', function (data, textStatus, jqXHR) {
 			system_enable = JSON.parse(data)["systemstatus"];
@@ -20,7 +20,6 @@ $(document).ready(function () {
 		});
         $.get('lib/api.php?systems', function (data, textStatus, jqXHR) {
             system_status = JSON.parse(data);
-            $("body").delay(1000).fadeIn(250);
         });
         for (i = 0; i < system_status.length; i++) {
             button_id = system_status[i]["gpio"];
@@ -38,7 +37,9 @@ $(document).ready(function () {
             //todo
         }
     }, 1000);
-    
+	$("body").delay(1750).fadeIn(250);
+}
+$(document).ready(function(){
     $("#menuopen").click(function () {
         $("#menuopen").fadeOut(250, function () {
             $('#menunav').fadeIn(250);
@@ -56,10 +57,7 @@ $(document).ready(function () {
 		$.get('lib/api.php?update',function (data,textStatus,jqXHR){
 			console.log("Response -> " + data);	
 	  	});
-	   
-	  
 	});
-
 }); 
 
 function getData(index) {
