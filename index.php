@@ -20,7 +20,7 @@ $id = $sqlquery->get_id();
 <script src="js/jquery.js"></script> 
 <script src="js/sprinkler.js"></script>
 </head>
-<body onload="getSprinklers();" style="display:hidden;"> 
+<body onload="getSprinklers();" style="display:none;"> 
 <div>
     <div class="w3-display-topmiddle w3-threequarter w3-padding-small striped">
         <div class="w3-rest">
