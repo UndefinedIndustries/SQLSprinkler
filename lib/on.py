@@ -19,3 +19,5 @@ for row in list(cur.fetchall()):
     print(row[0])
     GPIO.setup(i, GPIO.OUT)
     GPIO.output(i, False)
+    time.sleep(row[0]*60)
+    GPIO.output(i, True)
