@@ -37,3 +37,10 @@ button {
     background-color: #F8F8F8 !important;
     color: black !important;
 }
+
+.sprinkler-table th{
+	vertical-align:middle;
+}
+.sprinkler-table tr td{
+	vertical-align:middle;
+}

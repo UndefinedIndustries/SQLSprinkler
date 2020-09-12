@@ -24,7 +24,7 @@ $gpios = $sqlquery->get_gpios();
 </head>
 <body>
 	<div class="w3-display-topmiddle w3-threequarter w3-padding-small">
-		<table class="w3-table-all w3-centered" style="width:100%">
+		<table class="w3-table-all w3-centered sprinkler-table" style="width:100%">
 		<tr>
 			<th>Zone</th>
 			<th>Run Time</th>
