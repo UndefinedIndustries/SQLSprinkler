@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import sys
 import RPi.GPIO as GPIO
+import MySQLdb
 import time
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
