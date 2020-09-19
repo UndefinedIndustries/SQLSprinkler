@@ -21,7 +21,6 @@ function getData(id){
 	system_id=id;
 	$("#table").fadeOut(500);
     $("#edit").load("edit.html");
-	console.log(system_status[id]);
     setTimeout(function(){
 	$("#zone-name").val(system_status[id]["zonename"]);
 	$("#zone-gpio").val(system_status[id]["gpio"]);
