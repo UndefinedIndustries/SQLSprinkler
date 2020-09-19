@@ -30,6 +30,7 @@ $gpios = $sqlquery->get_gpios();
 			<th>Run Time</th>
 			<th>Actions</th>
 		</tr>
+        <!-- Change this to pure html. -->
 		<?php
 			for ( $i = 0; $i < sizeof( $id ); $i++ ) {
 		?>
