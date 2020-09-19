@@ -9,7 +9,7 @@ $id = $sqlquery->get_id();
 <!doctype html>
 <html>
 <head>
-<base href="<?php echo $_SERVER['HTTP_HOST'].$url; ?>"/>
+<base href="<?php echo $_SERVER['HTTP_HOST']; ?>"/>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SQLSprinkler</title>
