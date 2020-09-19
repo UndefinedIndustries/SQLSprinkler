@@ -23,8 +23,8 @@ $gpios = $sqlquery->get_gpios();
 <script src="../js/settings.js"></script>
 </head>
 <body>
-	<div class="w3-display-topmiddle w3-threequarter w3-padding-small">
-		<table class="w3-table-all w3-centered sprinkler-table" style="width:100%">
+	<div class="w3-display-topmiddle w3-threequarter w3-padding-small" id="table">
+ 		<table class="w3-table-all w3-centered sprinkler-table" style="width:100%">
 		<tr>
 			<th>Zone</th>
 			<th>Run Time</th>
@@ -37,7 +37,7 @@ $gpios = $sqlquery->get_gpios();
 		<tr>
 			<td><?php echo $i+1;?></td>
 			<td><?php echo $times[$i];?></td>
-			<td><a href="?edit=<?php echo $gpios[$i];?>" class="w3-button w3-gray">Edit</a>&nbsp;<a href="?delete=<?php echo $gpios[$i]; ?>" class="w3-button w3-red">Delete</a></td>
+			<td><button id="<?php echo $i;?>" value="edit" class="w3-button w3-gray">Edit</button>&nbsp;<button id="?delete=<?php echo $i; ?>" class="w3-button w3-red" value="delete">Delete</button></td>
 		<?php
 			}
 		?>
@@ -50,5 +50,6 @@ $gpios = $sqlquery->get_gpios();
 			<a href="../" class="w3-button" ><i style="z-index: 5;" class="fa fa-home"></i></a> 
     	</div>
 	</div>
+    <div id="edit" style="display:none;"></div>
 </body>
 </html>
