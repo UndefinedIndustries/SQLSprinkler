@@ -55,7 +55,7 @@ $(document).ready(function(){
 	 	console.log("Sent update request...");
 		$.get('lib/api.php?update',function (data,textStatus,jqXHR){
 			console.log("Response -> " + data);
-			$("notification-text").html('Update status : ' + data);
+			$("#notification-text").html(data);
 			$("#notification").fadeIn("slow");
 			$(".dismiss").click(function(){
 				$("#notification").fadeOut("slow");
