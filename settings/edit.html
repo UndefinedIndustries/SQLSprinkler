@@ -13,6 +13,7 @@ input {
     padding-top: 30px;
 }
 span {
+tifcation-text").html('Are you sure you want to change the GPIO pin from '+system_status[system_id]["gpio"]+'?');
     margin-top: 10px!important;
     vertical-align: middle!important;
 }
@@ -25,6 +26,26 @@ $("#settings-submit").click(function(){
    oldname=system_status[system_id]["zonename"];
    submitChanges(system_id,newname,oldname,gpio,runtime);
 });
+$("#zone-gpio").change(function(){
+    
+    if(!($(this).val() == system_status[system_id]["gpio"])){
+        $(this).css("color","#FF0000");
+        $("#notification-text").html('Are you sure you want to change the GPIO pin from '+system_status[system_id]["gpio"]+'?');
+        $("#notification").fadeIn("slow");
+        $(".dismiss").click(function(){
+            $("#notification").fadeOut("slow");
+        });
+        $("#notification-no").click(function(){
+            $("#zone-gpio").val(system_status[system_id]["gpio"]);
+            $(".dismiss").click();
+            $(this).css("color","#000000");
+        });
+    }else{
+        $(this).css("color","#000000");
+        $("#notification").fadeOut("slow");
+    }
+});
+
 </script>
 <div style="font-size: 1.25em" style="display:block!important;" class="w3-display-topmiddle w3-threequarter w3-padding-16 w3-padding-small" id="settings">
         <div id="settings" class="w3-rest w3-padding ">
@@ -36,6 +57,11 @@ $("#settings-submit").click(function(){
             <div id="zone-name-details" class="subsetting">
                 <span>Zone GPIO</span>
                 <input type="number" max="40" min="1" id="zone-gpio" />
+            </div>
+            <div id="notification" style="display: none;font-size: .75em;padding:16px;" class="w3-card-4">
+                <span class="w3-button dismiss w3-red" ><a title="dismiss this notification" >x</a></span>
+                <span id="notification-text"></span>
+                <span id="notification-no" class="w3-button w3-green">No</span>
             </div>
             <hr>
             <div id="zone-name-details" class="subsetting">

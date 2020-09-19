@@ -36,7 +36,7 @@ $gpios = $sqlquery->get_gpios();
 		?>
 		<tr>
 			<td><?php echo $i+1;?></td>
-			<td><?php echo $times[$i];?></td>
+			<td id="runtime-<?php echo $i+1; ?>"><?php echo $times[$i];?></td>
 			<td><button id="<?php echo $i;?>" value="edit" class="w3-button w3-gray">Edit</button>&nbsp;<button id="?delete=<?php echo $i; ?>" class="w3-button w3-red" value="delete">Delete</button></td>
 		<?php
 			}
