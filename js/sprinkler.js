@@ -14,9 +14,8 @@ function getSprinklers() {
 				$("#schedule-btn").removeClass("programon");
 				$("#schedule-btn").addClass("programoff");
 				$("#schedule").html("Off");
-				$("#schedule-btn-txt").html("On");					
+				$("#schedule-btn-txt").html("On");
 			}
-			
 		});
         $.get('lib/api.php?systems', function (data, textStatus, jqXHR) {
             system_status = JSON.parse(data);
@@ -33,7 +32,7 @@ function getSprinklers() {
             }else{
 				$("#"+button_id).removeClass("systemon")
 			   	$("#"+button_id).addClass("systemoff")
-	   		} 
+	   		}
             //todo
         }
     }, 1000);
@@ -55,7 +54,12 @@ $(document).ready(function(){
 	$("#update").click(function () {
 	 	console.log("Sent update request...");
 		$.get('lib/api.php?update',function (data,textStatus,jqXHR){
-			console.log("Response -> " + data);	
+			console.log("Response -> " + data);
+			$("notification-text").html('Update status : ' + data);
+			$("#notification").fadeIn("slow");
+			$(".dismiss").click(function(){
+				$("#notification").fadeOut("slow");
+			});
 	  	});
 	});
 }); 

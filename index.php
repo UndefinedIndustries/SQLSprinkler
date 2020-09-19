@@ -23,6 +23,10 @@ $id = $sqlquery->get_id();
 <body onload="getSprinklers();" style="display:none;"> 
 <div>
     <div class="w3-display-topmiddle w3-threequarter w3-padding-small striped">
+        <div id="notification" style="display: none;font-size: .75em;padding:16px;" class="w3-card-4">
+            <span id="notification-text"></span>
+            <span class="w3-button dismiss w3-red" ><i class="fas fa-times" ></i></span>
+        </div>
         <div class="w3-rest">
             <div style="float:left;">
                 <p>System Schedule<br>
