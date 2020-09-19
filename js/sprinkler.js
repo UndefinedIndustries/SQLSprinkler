@@ -3,7 +3,7 @@ var system_enable = "";
 function getSprinklers() {
     setInterval(function () {
 		$.get('lib/api.php?systemstatus', function (data, textStatus, jqXHR) {
-			system_enable = JSON.parse(data)["systemstatus"];
+			system_enable = JSON.parse(data);
 			system_enable = (system_enable == "1") ? true : false;
 			if(system_enable){
 				$("#schedule").html("On");

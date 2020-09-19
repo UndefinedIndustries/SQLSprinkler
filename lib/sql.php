@@ -58,6 +58,8 @@ class doSQL{
         $dbname = "SQLSprinkler";
         $conn = mysqli_connect($servername, $username, $password, $dbname);
         $query = mysqli_query($conn, $query);
+        if(query)
+            return $query;
         return mysqli_error($conn);
     }
     function doSQLStuff($query){
