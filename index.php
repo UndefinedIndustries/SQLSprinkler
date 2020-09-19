@@ -29,7 +29,7 @@ $id = $sqlquery->get_id();
                     Status: <span id="schedule"></span></p>
             </div>
             <div style="float:right;margin-top:8px">
-                <button id="schedule-btn" onclick="systemToggle();return false;" class="w3-button programoff w3-round-xxlarge w3-centered" >Turn <span id="schedule-btn-txt">Off</span></button>
+                <button id="schedule-btn" onclick="systemToggle();return false;" class="w3-button programoff w3-round-xxlarge w3-centered mybutton" >Turn <span id="schedule-btn-txt">Off</span></button>
             </div>
         </div>
         <hr>
@@ -48,7 +48,7 @@ $id = $sqlquery->get_id();
                     Status: <span id="status-<?php echo $i; ?>">Off</p>
             </div>
             <div style="float:right;margin-top:8px;">
-                <button id="<?php echo $gpios[$i]; ?>" name="toggle" onclick="getData(<?php  echo $i; ?>);return false;" class="w3-button systemoff w3-round-xxlarge w3-center" >Turn On</button>
+                <button id="<?php echo $gpios[$i]; ?>" name="toggle" onclick="getData(<?php  echo $i; ?>);return false;" class="w3-button systemoff w3-round-xxlarge w3-center mybutton" >Turn On</button>
             </div>
         </div>
         <hr>
