@@ -12,6 +12,7 @@ if(isset($_GET['systems'])){
 	$array = array();                                         	
 	for ( $i = 0; $i < sizeof( $id ); $i++ ) {
 		$value = shell_exec( 'gpio -g read ' . $gpios[ $i ] );
+        $array[ $i ] = (object)array();
 		$array[ $i ]->gpio = $gpios[ $i ];                    	
 		$array[ $i ]->status = ( $value == 0 ? "on" : "off" );	
         $array[ $i ]->zonename = $names[ $i ];
@@ -20,6 +21,7 @@ if(isset($_GET['systems'])){
 	$json = json_encode( $array );
 	echo $json;
 }
+
 if(isset($_GET['systemstatus'])){
 	$enabled = $sqlquery->querySQL("SELECT enabled from `Enabled`"); 
 	$isEnabled = "";
@@ -27,10 +29,12 @@ if(isset($_GET['systemstatus'])){
     	while ( $row = mysqli_fetch_array( $enabled ) ) {
 			$isEnabled = $row[0];
 		}
+        $newJson = (object)array();
 		$newJson->systemstatus=$isEnabled;
 		echo json_encode ( $newJson );
 	}
 }
+
 /* Begin block for submit files */
 $dir=getcwd()."/";
 if ( isset( $_GET[ 'on' ] ) ) {
@@ -53,5 +57,15 @@ if ( isset ( $_GET[ 'update' ] ) ){
 	exec('/usr/bin/git fetch 2>&1');
 	exec('/usr/bin/git pull 2>&1');
 	echo "Done checking for updates.";
+}
+if ( isset( $_POST[ 'call' ] ) ) {
+    if ( $_POST['call'] == "update" ){  
+        $gpio=$_POST['gpio'];
+        $zone=$_POST['zone'];
+        $name=$_POST['name'];
+        $oldname=$_POST['oldname'];
+        $runtime=$_POST['runtime'];
+        $sqlquery->querySQL("UPDATE Systems SET `Name`='".$name."', `GPIO`=".$gpio.", `Time`=".$runtime." WHERE id=".($zone+1));
+    }
 }
 ?>
