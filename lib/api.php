@@ -7,11 +7,15 @@ if(isset($_GET['systems'])){
 	$sqlquery->doSQLStuff( "SELECT * FROM `Systems`" );
 	$gpios = $sqlquery->get_gpios();
 	$id = $sqlquery->get_id();
+    $names = $sqlquery->get_names();
+    $runtimes = $sqlquery->get_times();
 	$array = array();                                         	
 	for ( $i = 0; $i < sizeof( $id ); $i++ ) {
 		$value = shell_exec( 'gpio -g read ' . $gpios[ $i ] );
 		$array[ $i ]->gpio = $gpios[ $i ];                    	
 		$array[ $i ]->status = ( $value == 0 ? "on" : "off" );	
+        $array[ $i ]->zonename = $names[ $i ];
+        $array[ $i ]->runtime = $runtimes[ $i ];
 	}                                                         	
 	$json = json_encode( $array );
 	echo $json;

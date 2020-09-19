@@ -8,7 +8,48 @@
 <link href="../css/style.css" type="text/css" rel="stylesheet" />
 <script src="https://kit.fontawesome.com/e00a151875.js" crossorigin="anonymous"></script> 
 <script src="../js/jquery.js"></script> 
-<script src="../js/sprinkler.js"></script>
+<script src="../js/sprinkler.js"></script> 
 <script src="../js/settings.js"></script>
+<style>
+input {
+    outline: none!important;
+    float: right;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    max-width: 50%;
+}
+.subsetting {
+    margin: 10px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+span {
+    margin-top: 10px!important;
+    vertical-align: middle!important;
+}
+</style>
 </head>
+<div style="font-size: 1.25em" style="display:block!important;" class="w3-display-topmiddle w3-threequarter w3-padding-16 w3-padding-small">
+
+<div id="settings" class="w3-rest w3-padding ">
+    <div id="zone-name-details" class="subsetting">
+        <span>Zone Name</span>
+        <input type="text" id="zone-name" value="Change me" />
+    </div>
+    <hr>
+    <div id="zone-name-details" class="subsetting">
+        <span>Zone GPIO</span>
+        <input type="number" max="40" min="1" id="zone-gpio" />
+    </div>
+    <hr>
+    <div id="zone-name-details" class="subsetting">
+        <span>Zone Runtime</span>
+        <input type="number" min="0" max="180" id="zone-runtime" />
+    </div>
+    <br>
+    <br>
+    <button style="float: right;"class="w3-button w3-round-xxlarge programon">Submit</button>
+</div>
+</div>
 </html>
