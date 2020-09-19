@@ -36,7 +36,7 @@ $id = $sqlquery->get_id();
         <br>
         <br>
         <!--        Begin systems, repeat this <?php echo sizeof($id); ?> times --> 
-        <!--        TODO: make an API system to get the status of each gpio. Cron?-->
+        <!--        TODO: Make this out of pure html and js. -->
         <?php
         for ( $i = 0; $i < sizeof( $id ); $i++ ) {
             ?>
