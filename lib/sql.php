@@ -58,7 +58,7 @@ class doSQL{
         $dbname = "SQLSprinkler";
         $conn = mysqli_connect($servername, $username, $password, $dbname);
         $query = mysqli_query($conn, $query);
-        return $query;
+        return mysqli_error($conn);
     }
     function doSQLStuff($query){
         $a = 0;
@@ -73,8 +73,6 @@ class doSQL{
         $newtimes = array();
 		$newdays = array();
         $id = array();
-       // echo $query.'<br><br>';
-        // var_dump($result);
         if($result){
             while($row = mysqli_fetch_array($result)){
                 array_push($newnames, $row['Name']);
