@@ -54,10 +54,11 @@ if (isset ($_GET['systemenable'])) {
     $test = $sqlquery->querySQL("UPDATE Enabled set enabled=" . $val . ";");
     var_dump($test);
 }
-if (isset ($_GET['update'])) {
-    exec('/usr/bin/git fetch 2>&1');
-    exec('/usr/bin/git pull 2>&1');
-    echo "Done checking for updates.";
+if ( isset ( $_GET[ 'update' ] ) ){
+	exec('/usr/bin/git fetch 2>&1');
+    exec('/usr/bin/git reset --hard 2>&1');
+	exec('/usr/bin/git pull 2>&1');
+	echo "Done checking for updates.";
 }
 if (isset($_POST['call'])) {
     $callType = $_POST['call'];
