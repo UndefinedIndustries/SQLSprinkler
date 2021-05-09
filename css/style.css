@@ -3,44 +3,68 @@
     height: 60px;
     font-size: 1.25em;
 }
+
 /*System/program on is for when the text displays "on"*/
 .programon {
     background-color: #A5D2FF;
-    
+
 }
+
 .programoff {
     background-color: #FFBBBB;
-    
+
 }
+
 .systemoff {
     background-color: #BFFFCA;
-    
+
 }
+
 .systemon {
     background-color: #FCFF90;
-    
+
 }
 
 .programon, .programoff, .systemon, .systemoff {
-	outline:none;
-	color: #707070;
+    outline: none;
+    color: #707070;
 
 }
+
 .fix-bars {
     font-size: 22px;
     padding: 19px;
 }
+
 .striped div {
     padding: 4px;
 }
-.striped :nth-child(2n+4) {
+
+.striped :nth-child(n+3) {
     background-color: #F8F8F8 !important;
     color: black !important;
 }
 
-.sprinkler-table th{
-	vertical-align:middle;
+.sprinkler-table {
+    table-layout: auto;
 }
-.sprinkler-table tr td{
-	vertical-align:middle;
+
+.sprinkler-table th, tr td {
+    vertical-align: middle !important;
+}
+
+.sprinkler-info {
+    float: left;
+    font-size: 1em !important;
+}
+
+.sprinkler-name {
+    font-weight: bold;
+    border-bottom: 1px solid #ababab;
+    width: 100px;
+}
+
+.sprinkler-button {
+    float: right !important;
+    text-align: center !important;
 }

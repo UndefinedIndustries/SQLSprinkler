@@ -85,7 +85,11 @@ function submitChanges(id, zonename, oldname, gpio, runtime) {
         console.log("Received data: " + data);
         if(addMode || deleteMode)
             location.reload();
-        $("#edit").fadeOut(500);
-        $("#table").fadeIn(500);
+        doCloseWindow();
     });
+}
+
+function doCloseWindow(){
+    $("#edit").fadeOut(500);
+    $("#table").fadeIn(500);
 }
